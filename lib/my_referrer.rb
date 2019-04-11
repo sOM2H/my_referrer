@@ -1,5 +1,4 @@
 require 'my_referrer/version'
-require 'gon'
 require 'uri'
 
 module MyReferrer
