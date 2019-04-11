@@ -1,9 +1,9 @@
 require 'my_referrer/version'
+require 'gon'
 require 'uri'
 
 module MyReferrer
-  class Engine < ::Rails::Engine; end
-
+  extend self 
   def my_referrer
     session['my_referrer'] = 'drt' unless request.referrer.present?
     session['my_referrer'] = URI(request.referrer).host
