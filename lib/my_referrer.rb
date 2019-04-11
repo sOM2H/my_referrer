@@ -1,7 +1,7 @@
 require 'my_referrer/version'
 require 'uri'
 
-module MyReferrer
+class  MyReferrer
   extend self 
   def my_referrer
     session['my_referrer'] = 'drt' unless request.referrer.present?
