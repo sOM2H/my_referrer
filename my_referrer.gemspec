@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Write a short summary, because Rubygems requires one.}
   spec.description   = %q{Write a longer description or delete this line.}
-  #spec.homepage      = "Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/sOM2H/my_referrer"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
