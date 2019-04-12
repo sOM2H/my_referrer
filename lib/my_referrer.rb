@@ -3,7 +3,7 @@ require 'my_referrer/engine'
 require 'uri'
 
 module  MyReferrer
-  def self.init
+  def self.init(request)
     if request.referrer.present? && @my_referrer.nil?
       @my_referrer = URI(request.referrer).host
                                           .split('www.')
