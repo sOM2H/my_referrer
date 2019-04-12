@@ -1,0 +1,3 @@
+module MyReferrer
+    class Engine < ::Rails::Engine; end
+end

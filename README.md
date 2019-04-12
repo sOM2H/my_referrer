@@ -21,7 +21,7 @@ Or install it yourself as:
 ``` erb
 <head>
   <title>some title</title>
-  <%= Gon::Base.render_data %>
+  <%= MyReferrer::Host.render_data %>
   <!-- include your action js code -->
   ...
 ```
