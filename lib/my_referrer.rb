@@ -3,13 +3,6 @@ require 'my_referrer/engine'
 require 'uri'
 
 module  MyReferrer
-
-  class MrController < ActionController
-    def self.call
-      gon.a = "a"
-    end
-  end
-
   def self.init
     if request.referrer.present? && @my_referrer.nil?
       @my_referrer = URI(request.referrer).host
