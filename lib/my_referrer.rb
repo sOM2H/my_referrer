@@ -18,7 +18,7 @@ module  MyReferrer
   end
 
   def self.render
-    "<script>//<![CDATA[\nwindow.mr={};mr.referrer="'+@my_referrer+'";mr.referrer_urls=' + @my_referrer_urls.to_s + ';//]]></script>"
+    '<script>//<![CDATA[\nwindow.mr={};mr.referrer="'+@my_referrer+'";mr.referrer_urls=' + @my_referrer_urls.to_s + ';//]]></script>'.html_safe
   end
 
 
