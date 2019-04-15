@@ -1,5 +1,4 @@
 require 'my_referrer/version'
-require 'my_referrer/engine'
 require 'uri'
 
 module  MyReferrer
@@ -19,7 +18,7 @@ module  MyReferrer
   end
 
   def self.render
-    '<script>\n//<![CDATA[\nwindow.mr={};mr.referrer="'+@my_referrer+'";mr.referrer_urls=' + @my_referrer_urls.to_s + ';\n//]]>\n</script>'
+    "<script>//<![CDATA[\nwindow.mr={};mr.referrer="'+@my_referrer+'";mr.referrer_urls=' + @my_referrer_urls.to_s + ';//]]></script>"
   end
 
 
