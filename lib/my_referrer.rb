@@ -2,27 +2,20 @@ require 'my_referrer/version'
 require 'uri'
 
 module  MyReferrer
-  def self.init(request)
+  def self.init(request, standart = 'drt')
     if request.referrer.present? && @my_referrer.nil?
       @my_referrer = URI(request.referrer).host
                                           .split('www.')
                                           .pop
                                           .split('/').shift
     else
-      @my_referrer = 'drt'
+      @my_referrer = standart
     end
   end
 
-  def self.load_urls(arr)
-    @my_referrer_urls = arr
-  end
-
-  def self.render
-    '<script>//<![CDATA[\nwindow.mr={};mr.referrer="'+@my_referrer+'";mr.referrer_urls=' + @my_referrer_urls.to_s + ';//]]></script>'.html_safe
-  end
-
-
-  def self.generate_fake_data
-    @my_referrer = ['google.com', 'yandex.com', 'vk.com', 'telegram.com'].sample
+  def self.load_urls(gon, arr)
+    gon.referrer = @my_referrer
+    gon.referrer_urls = arr
+    gon
   end
 end
