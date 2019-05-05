@@ -96,13 +96,15 @@ end
 
 It's my realization:
 ```ruby
-if request.referrer.present? && @my_referrer.nil?
-  @my_referrer = URI(request.referrer).host
-                                      .split('www.')
-                                      .pop
-                                      .split('/').shift
-else
-  @my_referrer = 'drt'
+if @my_referrer.nil?
+  if request.referrer.present?
+    @my_referrer = URI(request.referrer).host
+                                        .split('www.')
+                                        .pop
+                                        .split('/').shift
+  else
+    @my_referrer = 'drt'
+  end
 end
 @my_referrer
 
