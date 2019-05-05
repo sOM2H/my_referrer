@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mikhail Melnyk"]
   spec.email         = ["m1kh41l.melnyk@gmail.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
+  spec.summary       = %q{Outbound referrer hidden link gem for monolith projects.}
+  spec.description   = %q{Outbound referrer hidden link gem for monolith projects.}
   spec.homepage      = "https://github.com/sOM2H/my_referrer"
   spec.license       = "MIT"
 
@@ -18,8 +18,6 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-
-  spec.add_dependency "gon", "~> 6.2.1"
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"

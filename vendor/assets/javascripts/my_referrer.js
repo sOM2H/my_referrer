@@ -6,6 +6,11 @@ $( document ).ready(function() {
         window.open(e.target+"?srv="+gon.referrer);
         event.preventDefault();
       }
+      var link2 = e.target.parentNode.toString()
+      if( link2.includes(url.toString())){
+        window.open(e.target.parentNode+"?srv="+gon.referrer);
+        event.preventDefault();
+      }
     });
   });
 });
